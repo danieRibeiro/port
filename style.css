@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;1,200&family=Roboto:ital,wght@0,100;0,300;1,100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+}
+
+a, p, span, blockquote, label{
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+
+} 
+img{
+    max-width: 100%;
+}
+
+/*********** Header ***********/
+header{
+    height: 560px;
+    background: url('imagens/papel-fundo.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+header:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 0;
+}
+.navegacao{
+    margin: auto;
+    display: block;
+    text-align: center;
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+.navegacao nav ul{
+    display: block;
+}
+
+.navegacao nav ul li{
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 35px;
+}
+
+.navegacao nav ul li a{
+    text-transform: uppercase;
+    color: white;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, .4);
+}
+
+header .texto-home {
+    display: block;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header .texto-home *{
+    padding: 10px;
+    color: white;
+}
+
+header .texto-home h1{
+    font-size: 23px;
+    text-transform: uppercase;
+}
+
+.btn{
+    display: inline-block;
+    margin: 15px;
+    background: rgba(255, 0, 0, 0.678);
+    transition: .4s;
+    padding: 15px;
+    color: white;
+    border: 1px solid transparent;
+} .btn:hover{
+    color: rgba(255, 0, 0, 0.678);
+    background: white;
+    border-color: #f3f3f3;
+}
+
+/*********** Funcionalidades ***********/
+
+.titulo-secao{
+    text-align: center;
+    font-size: 29px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.titulo-secao:before{
+    content:"";
+    height: 4px;
+    background: red;
+    width: 34px;
+    position: absolute;
+    bottom: -15px;
+    border-radius: 11px;
+    left: 48%;
+}
+
+.section-funcionalidade{
+    padding: 60px 0;
+}
+
+.section-funcionalidade .grupo-funcionalidade{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 300px);
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.section-funcionalidade .grupo-funcionalidade .item-funcionalidade{
+    text-align: center;
+    padding-top: 75px;
+}
+
+.section-funcionalidade .grupo-funcionalidade .item-funcionalidade span{
+    font-size: 26px;
+    border: 4px solid #00000087;
+    border-radius: 50%;
+    padding: 10px;
+    width: 55px;
+    height: 55px;
+    transition: .4s;
+    
+}
+
+.section-funcionalidade .grupo-funcionalidade .item-funcionalidade:hover{
+    cursor: pointer;
+    
+}
+
+.section-funcionalidade .grupo-funcionalidade .item-funcionalidade:hover span {
+    box-shadow: 0px 0px 0 1px red, 0 0 0 4px white, 0 0 0 11px red;
+    border-color: transparent;
+}
+
+.section-funcionalidade .grupo-funcionalidade .item-funcionalidade h5{
+    
+    padding: 20px 0;
+    text-transform: inherit;
+    font-size: 14px;
+}
+
+.section-funcionalidade .grupo-funcionalidade .item-funcionalidade img {
+    width: 60px;
+}
+
+.section-funcionalidade .grupo-funcionalidade.two{
+    display: flex;
+    justify-content: space-around;
+}
+
+/*********** Galeria ***********/
+
+.section-galeria{
+    padding-top: 30px;
+    background: linear-gradient(45deg, black, rgba(0, 0, 0, .7));
+}
+
+.section-galeria .paragrafo-sub{
+    color: white;
+}
+
+.section-galeria .titulo-secao{
+    color: white;
+}
+
+.section-galeria figure{
+    margin-top: 60px;
+}
+
+.section-galeria figure div{
+    position: relative;
+    display: inline-block;
+    margin: 15px 0px;
+}
+
+.section-galeria figure div:before{
+    content: attr(title);
+    position: absolute;
+    width: 100%;
+    height: 99%;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    top: 50%;
+    font-weight: 600;
+    transform: translate(-50%, -50.6%);
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    background: rgb(60 59 59 / 43%);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+    
+    transition: all .1s;
+    border: 1px solid rgba(255,255,255, 0.2);
+}
+
+.section-galeria figure div:hover:before{
+    visibility: visible;
+    cursor: pointer;
+}
+
+.section-galeria figure div img{
+    height: 300px;
+}
+
+/*********** Time ***********/
+
+.section-time .grupo-time .integrante-time{
+    text-align: center;
+    padding: 15px 0;
+}
+
+.section-time .grupo-time .integrante-time h5{
+    padding: 10px;
+}
+
+.section-time .grupo-time .integrante-time span{
+    color: rgba(255, 0, 0, 0.548);
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 0px 0 10px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.section-time .grupo-time .integrante-time .icons-time a{
+    padding: 10px 0;
+    display: inline-block;
+}
+
+.section-time .grupo-time .integrante-time .icons-time i{
+    border-radius: 0;
+    color: #c3c3c3;
+    background: white;
+    padding: 15px;
+    border: 1px solid #f3f3f3;
+}
+
+/*********** Depoimentos ***********/
+
+.section-depoimentos{
+    display: block;
+    
+}
+
+.section-depoimentos .imagem-cliente img{
+    width: 100%;
+}
+
+.section-depoimentos .depoimentos{
+    width: 100%;
+    padding: 10px 0;
+    overflow: hidden;
+    position: relative;
+    height: 200px;
+    margin: auto;
+    top: -4px;
+}
+
+.section-depoimentos .depoimentos article{
+    display: flex;
+    padding: 13px 15px 69px;
+    position: absolute;
+    visibility: hidden;
+    background: blueviolet;
+    top: 0;
+    width: 100%;
+    
+}
+
+.section-depoimentos .depoimentos article blockquote{
+    width: 290px;
+    color: white;
+    font-size: 14px;
+}
+
+
+.section-depoimentos .depoimentos article blockquote cite{
+    display: block;
+    padding-top: 30px;
+    color: white;
+}
+
+.dots-sliders {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 187px;
+}
+
+.dot-slider{
+    border: 1px solid white;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    background: rgba(255, 255, 255, .4);
+    
+}
+
+.dot-slider:hover{
+    cursor: pointer;
+    background: rgba(255, 255, 255, .4);
+}
+
+
+.depoimentoAtual{
+    display: block;
+    visibility: visible;
+    background: white;
+}
+
+.active{
+    visibility: visible !important;
+    display: block;
+}
+
+/*********** Download ***********/
+
+.section-downloads{
+    padding: 25px;
+
+}
+
+.section-downloads article .titulo-secao:before{
+    bottom: -40px;
+}
+
+.paragrafo-sub{
+    text-align: center;
+    font-style: italic;
+    padding: 7px;
+    font-weight: 600;
+}
+.section-downloads article{
+    text-align: center;
+}
+
+.section-downloads article .contato{
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 80px;
+}
+
+
+.section-downloads article .contato i{
+    font-size: 26px;
+    padding: 10px;
+    border-radius: 50%;
+    transition: .4s;
+    border: 4px solid #00000087;
+}
+
+.section-downloads article .contato:hover i{
+    box-shadow: 0px 0px 0 1px red, 0 0 0 4px white, 0 0 0 11px red;
+    border-color: transparent;
+}
+
+.section-downloads article .contato p {
+    margin-top: 18px;
+}
+
+.section-downloads form{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.section-downloads form h5{
+    font-weight: 400;
+}
+
+.section-downloads form label{
+    padding: 10px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.section-downloads form .field-form{
+    text-align: left;
+    display: flex;
+    justify-content: flex-end;
+    transform: translate(-22%);
+}
+
+.section-downloads form .field-form input{
+    width: 50.3%;
+    margin: 15px;
+    padding: 7px;
+}
+
+.section-downloads form input[type="submit"]{
+    margin-top: 10px;
+    padding: 10px 40px;
+    background: red;
+    color: white;
+    transition: .4s;
+    border: 1px solid transparent;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+}
+
+.section-downloads form input[type="submit"]:hover{
+    background: white;
+    color: black;
+}
+
+
+
+
+
+/*********** Footer ***********/
+
+footer{
+    background: rgba(36, 53, 107, 0.479);
+}
+
+footer div{
+    text-align: center;
+    padding: 15px;
+}
+
+
+
+footer div h4{
+    color: white;
+    text-transform: uppercase;
+}
+
+footer div p{
+    color: white;
+    padding-top: 10px;
+    font-size: .9em;
+}
+
+footer .icons-footer{
+    padding: 15px;
+}
+
+footer .icons-footer a{
+    margin: 7px;
+}
+
+footer .icons-footer a:hover i{
+    transform: scale(1.1);
+}
+
+footer .icons-footer i{
+    border-radius: 0;
+    border: 2px solid white;
+    padding: 15px;
+    color: white;
+    transition: .4s;
+}
+
+footer .info-localizacao .contato-footer{
+    color: rgb(24 23 23 / 85%);
+    font-size: 15px;
+    margin-top: 9px;
+    font-weight: bold;
+    display: inline-block;
+    transition: .4s;
+}
+
+footer .info-localizacao .contato-footer:hover{
+    transform: scale(1.1);
+}
+
+footer .info-site{
+    background: rgb(23 23 30);
+}
+
+footer .info-site p{
+    color: white;
+}
+
+footer .info-site p i{
+    color: red;
+}
+
+footer .info-site p a{
+    color: #c3c3c3;
+}
+
