@@ -137,7 +137,7 @@ header .texto-home h1{
 .section-funcionalidade .grupo-funcionalidade{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(5, 300px);
+    grid-template-rows: repeat(3, 300px);
     column-gap: 30px;
     row-gap: 30px;
 }
@@ -179,10 +179,6 @@ header .texto-home h1{
     width: 60px;
 }
 
-.section-funcionalidade .grupo-funcionalidade.two{
-    display: flex;
-    justify-content: space-around;
-}
 
 /*********** Galeria ***********/
 
@@ -201,6 +197,7 @@ header .texto-home h1{
 
 .section-galeria figure{
     margin-top: 60px;
+    text-align: center;
 }
 
 .section-galeria figure div{

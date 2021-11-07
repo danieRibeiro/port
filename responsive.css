@@ -145,12 +145,16 @@
     }
 
     footer .info-localizacao div:not(.icons-footer) {
-    width: 33%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+        width: 33%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .section-funcionalidade .grupo-funcionalidade.two {
+        display: flex;
+        justify-content: space-around;
+    }
 }
 
 @media(min-width: 1440px){
