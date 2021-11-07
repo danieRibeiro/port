@@ -73,7 +73,12 @@ header:before{
     text-transform: uppercase;
     color: white;
     padding: 10px;
-    border-top: 1px solid rgba(255, 255, 255, .4);
+    transition: .4s;
+    border-top: 1px solid transparent;
+}
+
+.navegacao nav ul li a:hover{
+    border-bottom: 1px solid rgba(255, 255, 255, .4)
 }
 
 header .texto-home {
